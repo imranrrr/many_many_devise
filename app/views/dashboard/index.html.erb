@@ -1,0 +1,18 @@
+<% if author_signed_in? %>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">BookShop</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Add Book</a></li>
+        <li><a href="#">Show Book</a></li>
+        <li><%= link_to 'sign out', destroy_author_session_path, method: :delete %></li>
+      </ul>
+    </div>
+  </nav>
+<% else %>
+  <li><%= link_to 'Log In', new_author_session_path %></li>
+  <li><%= link_to 'Sign Up', new_author_registration_path %></li>
+<% end %>
