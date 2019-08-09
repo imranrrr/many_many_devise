@@ -9,10 +9,10 @@
 
   <tbody>
 
-    <% @account.each do |f| %>
+    <% @accout.each do |f| %>
       <tr>
-        <td> <%= Book_bookName.find_by(f.book_id) %> </td>
-        <td> <%= Author_email.find_by(f.author_id) %> </td>
+        <td> <%= Book.find(f.book_id).bookName %> </td>
+        <td> <%= Author.find(f.author_id).email %> </td>
         <!-- <td> <%= time_ago_in_words(f.created_at) %> ago </td> -->
       </tr>
     <% end %>

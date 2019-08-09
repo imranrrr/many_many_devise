@@ -1,1 +1,20 @@
-<h2>jndnc</h2>
+<h2>Books record </h2>
+
+
+<table>
+  <tr>
+    <th>Book Id</th>
+    <th>Book Name</th>
+  </tr>
+
+  <tbody>
+
+    <% @books.each do |book| %>
+      <tr>
+        <td> <%= book.id%> </td>
+        <td> <%= book.bookName%> </td>
+      </tr>
+    <% end %>
+  <tbody>
+</table>
+

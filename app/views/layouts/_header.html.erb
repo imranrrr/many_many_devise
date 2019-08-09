@@ -2,12 +2,12 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">BookShop</a>
+        <li><%= link_to 'BookShop', accouts_path, class:"navbar-brand" %></li>
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Add Book</a></li>
-        <li><a href="#">Show Book</a></li>
+        <li><%= link_to 'Add Book', new_book_path %></li>
+        <li><%= link_to 'show book', books_path %></li>
         <li><%= link_to 'sign out', destroy_author_session_path, method: :delete %></li>
       </ul>
     </div>
